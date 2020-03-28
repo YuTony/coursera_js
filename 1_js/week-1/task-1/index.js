@@ -3,12 +3,19 @@
  * @param {Number} b Второе слагаемое
  * @returns {Number}
  */
-module.exports = function (a, b) {
-    if (typeof a == 'string') {
-        a = parseInt(a,10);
-    }
-    if (typeof b == 'string') {
-        b = parseInt(b,10);
-    }
-    return a + b;
+
+var filterInt = function(value) {
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
+  return NaN;
 };
+
+module.exports = function(a, b) {
+  return filterInt(a) + filterInt(b)
+};
+
+
+// solution
+// module.exports = function (a, b) {
+//   // Выполняем приведение аргументов к числу и складываем
+//   return Number(a) + Number(b);
+// };
