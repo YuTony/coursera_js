@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.toggle__grid:not(:checked) + label,
+.toggle__list:not(:checked) + label {
+    opacity: 0.3;
+}
+
+.container {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.container li {
+    display: inline-block;
+}
+
+.card__wrapper {
+    display: inline-block;
+    margin: 10px 20px 0;
+    vertical-align: top;
+    width: 200px;
+}
+
+.toggle__list:checked ~ .container .card__wrapper {
+    display: block;
+    width: auto;
+}
+
+.card__title:hover .card__name-link,
+.card__title:focus .card__name-link {
+    color: #ff0000;
+}
+
+.card__title:hover .card__image,
+.card__title:focus .card__image {
+    opacity: 0.7;
+}
+
+.card__container {
+    display: inline-block;
+    width: 200px;
+    margin-right: 50px;
+    vertical-align: top;
+}
+
+.toggle__list:checked ~ .container .card__title {
+    position: relative;
+}
+
+.card__image {
+    display: block;
+    position: relative;
+
+    width: 200px;
+    height: 250px;
+}
+
+.toggle__list:checked ~ .container .card__image {
+    display: inline;
+}
+
+.card__image img {
+    display: block;
+    bottom: 0;
+}
+
+.toggle__list:not(:checked) ~ .container .card__image img {
+    position: absolute;
+}
+
+.card__name-link {
+    display: block;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.toggle__list:checked ~ .container .card__name-link {
+    position: absolute;
+
+    width: 200px;
+
+    top: 0;
+    left: 255px;
+}
+
+.card__category {
+    font-size: 10px;
+    color: #454441;
+}
+
+.toggle__list:checked ~ .container .card__category {
+    display: block;
+    margin-top: 30px;
+}
+
+.card__rating {
+    position: relative;
+
+    width: 5em;
+    height: 1em;
+}
+
+.rating__star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1em;
+    background-image: url("img/white-star.svg");
+    background-size: 1em auto;
+    background-repeat: repeat-x;
+    margin: 5px 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.rating__star:focus {
+    outline: none;
+}
+
+.rating__star:checked,
+.rating__star:hover {
+    background-image: url("img/star.svg");
+    background-repeat: repeat-x;
+}
+
+.rating__star:hover ~ .rating__star {
+    background-image: url("img/white-star.svg");
+}
+
+.rating__star:nth-of-type(1) {
+    z-index: 10;
+    width: 0.5em;
+}
+
+.rating__star:nth-of-type(2) {
+    z-index: 9;
+    width: 1em;
+}
+
+.rating__star:nth-of-type(3) {
+    z-index: 8;
+    width: 1.5em;
+}
+
+.rating__star:nth-of-type(4) {
+    z-index: 7;
+    width: 2em;
+}
+
+.rating__star:nth-of-type(5) {
+    z-index: 6;
+    width: 2.5em;
+}
+
+.rating__star:nth-of-type(6) {
+    z-index: 5;
+    width: 3em;
+}
+
+.rating__star:nth-of-type(7) {
+    z-index: 4;
+    width: 3.5em;
+}
+
+.rating__star:nth-of-type(8) {
+    z-index: 3;
+    width: 4em;
+}
+
+.rating__star:nth-of-type(9) {
+    z-index: 2;
+    width: 4.5em;
+}
+
+.rating__star:nth-of-type(10) {
+    z-index: 1;
+    width: 5em;
+}
+
+.card__price {
+    display: inline-block;
+    color: #851c04;
+    font-weight: bold;
+
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.card__old-price {
+    font-size: 10px;
+    color: #454441;
+    text-decoration: line-through;
+}
+
+.card__description {
+    font-size: 10px;
+}

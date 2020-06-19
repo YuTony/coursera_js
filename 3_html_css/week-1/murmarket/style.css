@@ -1,0 +1,130 @@
+.switch-container{
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cat-container{
+    max-width: 450px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 40px;
+    margin-bottom: 200px;
+}
+
+.cat-wrapper{
+    width: 100%;
+}
+
+.img-container{
+    text-align: center;
+    height: 370px;
+    position: relative;
+}
+
+.cat__image{
+    max-height: 100%;
+    max-width: 450px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 5px;
+}
+
+.cat__image:hover{
+    opacity: .7;
+}
+
+.cat__name{
+    color: blue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.cat__name:hover{
+    color: rgb(190, 26, 26);
+}
+
+.cat__category{
+    color: grey;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.rating{
+    padding: 0;
+    margin: 0 0 5px 0;
+    direction: rtl;
+    text-align: left;
+}
+
+.rating__el{
+    display: inline-block;
+    background: url("./assets/off.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+}
+
+.rating__el:hover ~ .rating__el, .rating__el:hover{
+    background-image: url("./assets/on.svg");
+}
+
+.rating__el:focus ~ .rating__el, .rating__el:focus{
+    background-image: url("./assets/on.svg");
+}
+
+.cat__price{
+    margin-bottom: 5px;
+}
+
+.cat__price-new{
+    color: rgb(187, 36, 36);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cat__price-old{
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.cat__about{
+    width: 100%;
+    font-size: 15px;
+}
+
+input, label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#inline-switch:checked ~ .cat-container{
+    display: inline-block;
+}
+
+#block-switch:checked ~ .cat-container{
+    display: block;
+    max-width: 100%;
+}
+
+#block-switch:checked ~ .cat-container > .cat-wrapper, #block-switch:checked ~ .cat-container > .img-container > .cat__image, #block-switch:checked ~ .cat-container > .img-container, #block-switch:checked ~ .cat-container > .cat__about{
+    max-width: 450px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+#block-switch:checked ~ .cat-container > .img-container{
+    width: 450px;
+}

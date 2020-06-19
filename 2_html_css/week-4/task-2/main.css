@@ -1,0 +1,28 @@
+body {
+    color: #444;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 white, 2px 2px;
+}
+
+.title,
+.translate {
+    text-align: center;
+}
+
+.translate {
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.paragraph {
+    text-indent: 3;
+    text-align: justify;
+}
+
+.paragraph::first-letter {
+    font-size: 20px;
+}

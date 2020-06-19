@@ -1,0 +1,39 @@
+.animation {
+    background-color: #f00;
+    height: 150px;
+    width: 150px;
+    animation: anim 3s linear 0s 1 normal forwards;
+    /* transition-duration: .5s; */
+    /* transform: translateX(100px), translateY(150px), scale(2,2) rotate(145deg); */
+}
+
+@keyframes anim {
+    33% {
+        transform: translateX(100px);
+    }
+    66% {
+        transform: translateX(100px) translateY(150px);
+    }
+    100% {
+        transform: translateX(100px) translateY(150px) scale(2,2) rotate(145deg);
+    }
+}
+
+.animation:hover {
+    background-color: #ff0;
+    transition-duration: .5s;
+}
+
+.animation:not(:hover) {
+    background-color: #f00;
+    transition-duration: .5s;
+}
+
+/* @keyframes anim {
+    from {
+
+    }
+    to {
+        transform: translateX(100px), translateY(150px), scale(2,2) rotate(145deg);
+    }
+} */

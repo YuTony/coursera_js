@@ -1,0 +1,22 @@
+body {
+    height: 10000px;
+}
+
+.cookies-banner {
+    box-sizing: border-box;
+    width: 150px;
+    border: 1px solid green;
+    padding: 10px 10px 20px;
+    position: fixed;
+    right: 25px;
+    top: 25px;
+}
+
+.cookies-banner input[type="button"] {
+    position: absolute;
+    color: white;
+    background-color: green;
+    border: none;
+    bottom: -5;
+    right: -5;
+}
