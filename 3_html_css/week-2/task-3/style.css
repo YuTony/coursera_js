@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    position: static;
+}
+
+.box {
+    margin: 100px auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 1100px;
+}
+
+.slider {
+    width: 10000px;
+    height: 700px;
+    /* box-sizing: border-box; */
+}
+
+.slide {
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    z-index: 0;
+    vertical-align: top;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide {
+    width: 265px;
+    height: 400px;
+    float: left;
+}
+
+input[name="page-selector"] {
+    text-align: center;
+}
+
+/* #page1:checked + .slider {
+    animation: swipe2 1s ease 0s 1 normal forwards;
+} */
+
+#page2:checked ~ .slider {
+    /* animation: swipe1 1s ease 0s 1 normal forwards; */
+    /* transform: translateX(-8.4%); */
+    margin-left: -825px;
+    /* left: -825px; */
+    /* position: static; */
+}
+
+#page3:checked ~ .slider {
+    /* transform: translateX(-16.8%); */
+    margin-left: -1650px;
+    /* position: static; */
+    /* animation: swipe2 1s ease 0s 1 normal forwards; */
+}
+
+/* @keyframes swipe1 {
+    to {
+        transform: translateX(-8.4%);
+    }
+}
+
+@keyframes swipe2 {
+    to {
+        transform: translateX(-16.8%);
+    }
+} */
+
+.slide p {
+    display: none;
+}
+
+.slide input[type="checkbox"] {
+    display: none;
+}
+
+.slide input[type="checkbox"]:checked + div {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(204,203,198,.7);
+    position: absolute;
+    /* opacity: 0.5; */
+}
+
+.slide input[type="checkbox"]:checked + div img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+    position: fixed;
+    z-index: 100;
+}
+
+.slide > div:hover {
+    box-shadow: 3px 3px 25px -3px black;
+    z-index: 2;
+    padding: 5px;
+    width: 275px;
+}
+
+.slide div:hover p {
+    display: inline;
+}
+
