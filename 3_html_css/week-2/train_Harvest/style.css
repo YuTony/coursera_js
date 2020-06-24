@@ -1,0 +1,215 @@
+.gallery {
+	text-align: center;
+	height: 50vh;
+	position: relative;
+}
+
+.veg-picture {
+	max-width: 100%;
+	max-height: 100%;
+	
+}
+
+.gallery__section {
+	display: block;
+	width: 100vw;
+	max-height: 30vh;
+	text-align: center;
+	margin-top: 100px;
+	z-index: 1000;
+	
+	
+	
+}
+
+.gallery__section-container {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s linear;/*, opacity 0.5s linear;*/
+	/*transition: left .5s ease-out;*/
+	width: 100%;
+	/*max-height: 200px;*/
+	/*height: 300px;*/
+	white-space: nowrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+	/*transition: left .5s ease-out;
+	-o-transition: left .5s ease-out;
+	-ms-transition: left .5s ease-out;
+	-moz-transition: left .5s ease-out;
+	-webkit-transition: left .5s ease-out;*/
+}
+
+.gallery__veg-item {
+	display: inline-block;
+	width: 20vw;
+	/*max-height: 300px;*/
+	/*margin-right: 20px;*/
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	top: 0;
+	bottom: auto;
+	vertical-align: top;
+	
+
+}
+
+.veg-description {
+	display: none;
+	/*display: block;*/
+	/*transform: translate(0%, 100%);*/
+	background-color: white;
+	/*position: absolute;*/
+	bottom: 0;
+	width: 100%;
+	/*white-space: nowrap;*/
+	white-space: normal;
+	/*text-overflow: ellipsis;*/
+	/*overflow: hidden;*/
+}
+
+.gallery__veg-item:hover > .veg-description {
+	display: block;
+	z-index: 2000;
+}
+
+.gallery__veg-item:hover {
+	border: 1px solid black;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	z-index: 2000;
+}
+
+
+
+.img-input {
+	width: 20vw;
+	height: 20vw;
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100%;
+	-webkit-appearance: none;
+}
+.img-input:before {
+	/*content: url('https://www.hindimeaning.com/wp-content/uploads/2012/12/winter-melon.png');*/
+	/*content: var(--bg-image);*/
+	width: 100%;
+	height: 100%;
+	content: '';
+	/*background-image: var(--bg-image);*/
+	background: var(--bg-image) center no-repeat;
+	background-size: contain;
+	
+	display: block;
+	/*max-width: 100%;*/
+	/*max-height: 100%;*/
+	overflow: hidden;
+}
+.img-input:checked:before {
+	/*content: url('https://www.hindimeaning.com/wp-content/uploads/2015/08/CLUSTER-BEANS-GAWAR-FALLI.jpg');*/
+	content: '';
+	/*background: url("https://www.hindimeaning.com/wp-content/uploads/2015/08/CLUSTER-BEANS-GAWAR-FALLI.jpg") center no-repeat;*/
+	display: block;
+	position: fixed;
+	/*transform: translate(-50%, -50%);*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*margin-right: auto;*/
+	/*padding-left: 50%;*/
+	/*padding-top: 50%;*/
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.7);
+	background-image: none;
+	z-index: 3000;
+}
+
+.img-input:checked:after {
+	/*content: url('https://www.hindimeaning.com/wp-content/uploads/2015/08/CLUSTER-BEANS-GAWAR-FALLI.jpg');*/
+	content: '';
+	background: var(--bg-image) center no-repeat;
+	display: block;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	/*margin-right: auto;*/
+	/*padding-left: 50%;*/
+	/*padding-top: 50%;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	/*background-color: rgba(0,0,0,0.7);*/
+	z-index: 3500;
+}
+
+
+
+
+
+.gallery__presentation-switch {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	/*margin-top: 50px;*/
+	opacity: 99%;
+	z-index: 1;
+	
+	position: absolute;
+	margin: 10px;
+	bottom: 0;
+}
+
+.gallery__presentation-switch1 {
+	transform: translate(-50%, 0);
+}
+
+.gallery__presentation-switch2 {
+	transform: translate(50%, 0);
+}
+
+.gallery__presentation-switch1:checked ~ .gallery__section .gallery__section-container1 {
+	visibility: visible;
+	opacity: 1;
+	
+	display: block;
+	
+	/*transition: left .5s ease-out;
+	-o-transition: left .5s ease-out;
+	-ms-transition: left .5s ease-out;
+	-moz-transition: left .5s ease-out;
+	-webkit-transition: left .5s ease-out;*/
+}
+
+.gallery__presentation-switch2:checked ~ .gallery__section .gallery__section-container2 {
+	visibility: visible;
+	opacity: 1;
+	
+	display: block;
+	
+/*	transition: left .5s ease-out;
+	-o-transition: left .5s ease-out;
+	-ms-transition: left .5s ease-out;
+	-moz-transition: left .5s ease-out;
+	-webkit-transition: left .5s ease-out;*/
+}
+
+
+.left-filler {
+	float: left;
+}
+.right-filler {
+	float: right;
+}
