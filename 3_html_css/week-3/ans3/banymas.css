@@ -1,0 +1,266 @@
+
+* {box-sizing: border-box;}
+
+header{      
+    padding: 0 0.5%;  
+    text-align: center;
+    margin: 1%;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+    min-width: 500px;
+	  min-height: 500px;
+    height: 100%;
+}
+
+html { 
+  font-size: 62.5%; 
+}
+
+.pagrindas{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	min-height: 100%;
+}
+
+.viskas {
+  display: flex;
+  flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;   
+  font: 1.2em Helvetica, arial, sans-serif;
+  margin: 0 2%;
+}
+
+.viskas > * {
+        border: 2px solid #333;;
+        background-color: #a9a9a9;
+        border-radius: 5px;
+        padding: 10px;       
+    }
+
+
+.container{
+  flex:3;
+}
+.aside{
+  flex: 1;
+  margin: 0 1%;
+}
+.nuorodos{
+  flex: 1;
+}
+.antraste{
+  font-size: 2.2em;
+}
+
+.nuorodos{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	order: -1;
+}
+
+/*input[type="checkbox"],input[type="radio"]{
+    display: none;
+}*/
+
+.rating-header{	
+	color: red;
+	font:  5vh monospace;
+  text-transform: uppercase;
+  text-align: left;
+}
+.order-label{
+	white-space: nowrap;
+	font:  3vh monospace;
+	padding-left: 40%;
+}
+#order{
+	display: inline-block;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .galerija  .nuotrauka  .container{
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+      
+  }
+}
+@media screen and (max-width: 600px) {
+  .galerija  .nuotrauka .container{
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+     
+  }
+}
+
+  /*.nuorodos */
+ .poroda-item{
+	padding: 0.5em 0.5em;
+	font:  4.5vh monospace;
+	border-bottom: 1px solid grey;
+}
+#p1,#p2,#p3,#p4{
+	order: -1;
+}
+#p1:checked ~ .container .galerija .nuotrauka .p1{
+	opacity: 0.5;
+}
+#p2:checked ~ .container .galerija .nuotrauka .p2{
+	opacity: 0.5;
+}
+#p3:checked ~ .container .galerija .nuotrauka .p3{
+	opacity: 0.5;
+}
+#p4:checked ~ .container .galerija .nuotrauka .p4{
+	opacity: 0.5;
+}
+#p1:checked ~ .nuorodos .p-lable1{
+	background-color: grey;
+}
+#p2:checked ~ .nuorodos .p-lable2{
+	background-color: grey;
+}
+#p3:checked ~ .nuorodos .p-lable3{
+	background-color: grey;
+}
+#p4:checked ~ .nuorodos .p-lable4{
+	background-color: grey;
+}
+label{
+	cursor: pointer;
+}
+
+/*galerija*/
+.galerija{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-gap: 10px;
+}
+
+.nuotrauka{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 15px;
+    padding: 1%;
+    transition: opacity .5s ease-in-out;
+
+    
+}
+.galerija > .nuotrauka:nth-child(4n-2){
+    grid-column: auto / span 2;
+}
+
+.galerija > .nuotrauka:nth-child(8n){
+    grid-column: auto / span 3;
+}
+
+.gallery__img{
+    max-height: 180px;
+    max-width: 90%;
+}
+
+.nuotrauka[data-title]:hover::after{
+
+      content: attr(data-title); 
+      opacity:0.6;
+      text-align:justify;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:30px;
+}
+
+
+/*reitingas*/
+.rating-wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	font:  3.5vh monospace;
+	margin-left: 0.5em;
+}
+#order:checked ~ .rating-wrapper > .rating-item{
+	order: var(--rating);
+
+}
+#order:checked ~ .rating-wrapper {
+	flex-direction: column-reverse;
+}
+.rating-item{
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap:3%;
+	grid-row-gap: 2%;
+	margin-bottom: 3%;
+	grid-template-areas: "name name    ."
+						 "scale scale  rating";		
+}
+.name{
+	grid-area: name;
+}
+
+  .rating{
+	grid-area: rating;
+	font-weight: bold;
+}
+.rating-item .scale{
+	grid-area: scale;
+	background: linear-gradient(to right, var(--color), #fff);
+	height: 4vh;
+	width: calc(var(--rating)*1.3vw);
+}
+
+
+input{
+	display: none;
+}
+
+poraste {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  height: 60px;
+  /* Height of the footer */
+  width: 100%;
+}
+.footer {
+  margin: 8px; 
+  height: 50px;
+}
+.alignLeft {
+  float: left;
+}
+.alignRight {
+  float: right;
+  color: blue;
+}
+
+
+
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+

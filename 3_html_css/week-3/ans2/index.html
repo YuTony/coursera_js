@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Бабуленькины котятки</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <h1>Бабуленькины котятки</h1>
+            <section class="view">
+                <input class="breed-radio" type="radio" name="breed" id="Абиссинская">
+                <input class="breed-radio" type="radio" name="breed" id="Британская">
+                <input class="breed-radio" type="radio" name="breed" id="Русская-голубая">
+                <input class="breed-radio" type="radio" name="breed" id="Сиамская">
+                <input class="breed-radio" type="radio" name="breed" id="Донской-сфинкс">
+                <nav class="navigation">
+                    <label class="breed-button" for="Абиссинская">Абиссинская</label>
+                    <label class="breed-button" for="Британская">Британская</label>
+                    <label class="breed-button" for="Русская-голубая">Русская голубая</label>
+                    <label class="breed-button" for="Сиамская">Сиамская</label>
+                    <label class="breed-button" for="Донской-сфинкс">Донской сфинкс</label>
+                </nav>
+                <ul class="gallery">
+                    <li class="gallery-card" data-title="Том, 2 года"><img class="cat-image" src="./images/british-2.jpg" alt="Британская"></li>
+                    <li class="gallery-card" data-title="Кеша, 3 года"><img class="cat-image" src="./images/russian-blue-2.jpg" alt="Русская-голубая"></li>
+                    <li class="gallery-card" data-title="Мурка, 1 год"><img class="cat-image" src="./images/russian-blue-1.jpg" alt="Русская-голубая"></li>
+                    <li class="gallery-card" data-title="Китти, 5 лет"><img class="cat-image" src="./images/abissinskaya-1.jpg" alt="Абиссинская"></li>
+                    <li class="gallery-card" data-title="Леопольд, 4 года"><img class="cat-image" src="./images/siamese.jpg" alt="Сиамская"></li>
+                    <li class="gallery-card" data-title="Клеопатра, 4 года"><img class="cat-image" src="./images/abissinskaya-2.jpg" alt="Абиссинская"></li>
+                    <li class="gallery-card" data-title="Феликс, 3 года"><img class="cat-image" src="./images/british-1.jpg" alt="Британская"></li>
+                    <li class="gallery-card" data-title="Царапка, 2 года"><img class="cat-image" src="./images/sphynx.jpg" alt="Донской-сфинкс"></li>
+                </ul>
+                <aside class="rating">
+                    <p class="rating-title">Рейтинг</p>
+                    <label class="switcher-label" for="order">по убыванию</label>
+                    <input class="switcher-checkbox" type="checkbox" name="order" id="order">
+                    <ul class="rating-list">
+                        <li class="rating-9">
+                            <p>Абиссинская</p><div><div></div><p></p></div>
+                        </li>
+                        <li class="rating-8">
+                            <p>Британская</p><div><div></div><p></p></div>
+                        </li>
+                        <li class="rating-3">
+                            <p>Донской сфинкс</p><div><div></div><p></p></div>
+                        </li>
+                        <li class="rating-10">
+                            <p>Русская голубая</p><div><div></div><p></p></div>
+                        </li>
+                        <li class="rating-4">
+                            <p>Сиамская</p><div><div></div><p></p></div>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="copyright">ООО Бабулины пирожки, 2020</p>
+            <a class="address" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%82_%D0%9B%D0%B5%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%D0%B4">Наш адрес: улица им. Кота Леопольда, д. 13</a>
+        </footer>
+    </body>
+</html>

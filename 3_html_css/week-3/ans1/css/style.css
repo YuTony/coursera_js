@@ -1,0 +1,241 @@
+html {
+    height: 98%;
+    margin: 0 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgba(97, 98, 112, 0.52);
+    height: 100%;
+    display: grid;
+    grid-template-areas: "h h h" "n g r" "f f f";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 100px 1fr 30px;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.rang {
+    grid-area: r;
+    display: grid;
+}
+
+.rang .rang_section {
+    display: grid;
+    background-color: rgba(97, 98, 112, 0.52);
+    grid-template-areas: "h h " "l c" "f f";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 35px 35px 1fr;
+    padding-left: 4px;
+    align-self: start;
+}
+
+.rang_section>.rang_title {
+    grid-area: h;
+    color: rgb(177, 19, 19);
+    margin-top: 0px;
+    font-size: 1.3em;
+}
+
+.rang_section>label {
+    grid-area: l;
+    text-align: right;
+}
+
+.rang_section>input {
+    grid-area: c;
+}
+
+.rang_section>.rang_list {
+    grid-area: f;
+    /* border: 1px solid rgb(22, 15, 46); */
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+.rang_cat {
+    display: grid;
+    grid-template-areas: "h h " "t v";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 25px 25px;
+}
+
+.rang_cat .rang_name {
+    grid-area: h;
+}
+
+.rang_cat .rang_text {
+    grid-area: t;
+    font-size: 0.8em;
+}
+
+.rang_cat .rang_value {
+    grid-area: v;
+    font-weight: bold;
+}
+
+.rang_abis .rang_text>span {
+    background: rgb(18, 207, 27);
+    color: rgb(18, 207, 27);
+}
+
+.rang_brit .rang_text>span {
+    background: rgb(188, 230, 4);
+    color: rgb(188, 230, 4);
+}
+
+.rang_rus .rang_text>span {
+    background: rgb(8, 248, 20);
+    color: rgb(8, 248, 20);
+}
+
+.rang_sim .rang_text>span {
+    background: red;
+    color: red;
+}
+
+.rang_check:checked~.rang_list .rang_rus {
+    order: -1;
+}
+
+.nav {
+    /* border: 1px solid rgb(131, 116, 116); */
+    grid-area: n;
+    display: grid;
+    grid-template-rows: repeat(4, 40px);
+    background-color: rgba(97, 98, 112, 0.52);
+}
+
+.nav>label:hover {
+    background-color: rgba(97, 98, 112, 0.52);
+}
+
+.nav>label {
+    border-bottom: 1px solid rgba(97, 98, 112, 0.52);
+    border-bottom: 1px solid black;
+    text-indent: 1em;
+    font-size: 1.3em;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+/* .nav>label:last-child {
+    border-bottom: none;
+} */
+
+.footer {
+    /* border: 10px solid blueviolet; */
+    grid-area: f;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 0 50px;
+}
+
+.footer * {
+    margin-top: 10px;
+}
+
+.header {
+    /* border: 10px solid black; */
+    grid-area: h;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.gallery {
+    /* border: 5px solid rgb(192, 49, 49); */
+    grid-area: g;
+    /* display: grid; */
+}
+
+.gallery>input {
+    display: none;
+}
+
+.gallery>.gallery_cat {
+    display: none;
+}
+
+input:checked+.gallery_cat {
+    display: block;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    /* Абсолютное позиционирование */
+    left: 25%;
+    top: 50%;
+    /* Положение подсказки */
+    z-index: 1;
+    /* Отображаем подсказку поверх других элементов */
+    background: rgba(32, 32, 30, 0.7);
+    /* Полупрозрачный цвет фона */
+    font-family: Arial, sans-serif;
+    /* Гарнитура шрифта */
+    font-size: 14px;
+    /* Размер текста подсказки */
+    padding: 5px 10px;
+    /* Поля */
+    color: white;
+}
+
+.scene {
+    /* border: 5px solid rgb(192, 49, 49); */
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "a b b" "c d e" "f f g" "k k k";
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-template-rows: repeat(4, 200px);
+    row-gap: 2px;
+    column-gap: 2px;
+    padding: 1px 1px;
+}
+
+.scene>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galery_img1 {
+    grid-area: a;
+    /* border: 35px solid rgb(189, 25, 46); */
+}
+
+.galery_img2 {
+    grid-area: b;
+}
+
+.galery_img3 {
+    grid-area: c;
+}
+
+.galery_img4 {
+    grid-area: d;
+}
+
+.galery_img5 {
+    grid-area: e;
+}
+
+.galery_img6 {
+    grid-area: f;
+}
+
+.galery_img7 {
+    grid-area: g;
+}
+
+.galery_img8 {
+    grid-area: k;
+}
