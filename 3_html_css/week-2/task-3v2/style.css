@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    position: static;
+}
+
+.box {
+    /* margin: 100px auto; */
+    /* overflow-x: hidden; */
+    /* width: 1100px; */
+    /* position: absolute; */
+    /* position: absolute; */
+    /* top: 30%; */
+    /* left: 50%; */
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, -50%); */
+    height: 200px;
+    width: 1080px;
+    margin: 20% auto;
+    position: relative;
+}
+
+input[name="page-selector"] {
+    display: none;
+}
+
+#page1:checked ~ .page-selector label[for="page1"]::after,
+#page2:checked ~ .page-selector label[for="page2"]::after,
+#page3:checked ~ .page-selector label[for="page3"]::after {
+    content: "";
+
+    position: absolute;
+    left: 2px;
+    top: 2px;
+
+    width: 2px;
+    height: 2px;
+    margin: 0;
+
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#page1:checked ~ .page-selector label[for="page1"],
+#page2:checked ~ .page-selector label[for="page2"],
+#page3:checked ~ .page-selector label[for="page3"] {
+    background-color: #3e56f0;
+}
+
+.page-selector label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    margin-right: 21px;
+    background-color: #0000;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page-selector {
+    /* position: absolute; */
+
+    /* left: 50%; */
+    /* margin-right: -50%; */
+    /* transform: translateX(-50%); */
+    /* bottom: -100px; */
+    width: 100%;
+    text-align: center;
+    float: right;
+
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+.slider {
+    width: auto;
+    /* height: 700px; */
+    /* float: right; */
+    /* box-sizing: border-box; */
+    list-style: none;
+    padding: 0;
+    /* margin: 0 auto; */
+    z-index: 2;
+    float: right;
+}
+
+.slide {
+    display: inline-block;
+    text-align: center;
+    /* margin: 0 5px; */
+    /* z-index: 0; */
+    vertical-align: top;
+
+    width: 265px;
+    height: auto;
+    /* float: left; */
+    display: none;
+    padding: 10px 10px;
+}
+
+.slide img {
+    width: 100%;
+}
+
+#page1:checked ~ .slider .page1,
+#page2:checked ~ .slider .page2,
+#page3:checked ~ .slider .page3 {
+    display: inline-block;
+}
+
+/* #page2:checked ~ .slider .page2 {
+    display: inline-block;
+}
+
+#page3:checked ~ .slider .page3 {
+    display: inline-block;
+} */
+
+.slide p {
+    display: none;
+}
+
+.slide input[type="checkbox"] {
+    display: none;
+}
+
+/* .slide input[type="checkbox"]:checked {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+} */
+
+.slide input[type="checkbox"]:checked + div label::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    background-image: url(img/krasnyj-krestik.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.slide input[type="checkbox"]:checked + div label::before {
+    display: block;
+}
+
+.slide input[type="checkbox"]:checked + div {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(204,203,198,.7);
+    position: absolute;
+}
+
+.slide input[type="checkbox"]:checked + div img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 50%;
+    /* max-height: 50%; */
+    margin: auto;
+    position: fixed;
+    z-index: 100;
+}
+
+.slide:hover {
+    box-shadow: 3px 3px 25px -3px black;
+    /* z-index: 2; */
+    /* padding: 10px; */
+    /* width: 275px; */
+}
+
+.slide article:hover p {
+    display: inline;
+}
+

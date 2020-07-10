@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "coursera_js"
+    "liveServer.settings.multiRootWorkspaceName": "coursera_js",
+    "debug.javascript.suggestPrettyPrinting": false
 }

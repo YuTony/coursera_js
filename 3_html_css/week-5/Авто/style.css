@@ -1,0 +1,224 @@
+html,body{
+    padding: 0;
+    font-family: 'Arial' , 'sans-serif';
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 0 30px;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 70px;
+    padding: 0 90px;
+    grid-column: auto / span 12;
+}
+
+main{
+    grid-column: auto / span 12;
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+
+.cars{
+    grid-column: auto / span 12;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-areas: 'ls ls quote quote quote quote quote quote quote quote rs rs'
+                         'ls ls cars cars cars cars cars cars cars cars rs rs';
+}
+
+.cars__switcher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cars__switcher-button{
+    width: 55px;
+    height: 55px;
+    background-color: #ffdb4a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 3px #ff5a00;
+}
+
+.cars__switcher-button:hover{
+    opacity: 0.7;
+}
+
+.cars__switcher-right-button-img{
+    transform: scale(-1,1);
+}
+
+.cars__switcher-left{
+    grid-area: ls;
+}
+
+.cars__quote{
+    grid-area: quote;
+}
+
+.cars__photos{
+    grid-area: cars;
+}
+
+.cars__switcher-right{
+    grid-area: rs;
+}
+
+.cars__quote-text{
+    font-size: 36px;
+    text-indent: -20px;
+}
+
+.cars__photos-item{
+    width: 100%;
+}
+
+.video{
+    grid-column: 3 / span 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.video_control{
+    position: absolute;
+}
+
+
+.video__header{
+    position: absolute;
+    background-color: #29363cc2;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.video__header-text{
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 29px;
+}
+
+.video__screen{
+    width: 100%;
+}
+
+.video__control{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.video__control-play-button{
+    height: 150px;
+    width: 150px;
+    background-color: #ffdb4a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 3px #ff5a00;
+
+    background-image: url('img/play.png');
+    background-repeat: no-repeat;
+    background-position: 55% 53%;
+}
+
+.video__control-play-button:hover{
+    opacity: 0.7;
+}
+
+.advantages{
+    grid-column: auto / span 12;
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.advantages__caption{
+    font-size: 47px;
+    font-weight: normal;
+    text-align: center;
+    grid-column: auto / span 12;
+}
+
+.advantages__cards{
+    grid-column: auto / span 12;
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.advantages-item{
+    grid-column: auto / span 3;
+    padding: 0 30px;
+}
+
+.advantages-item-caption{  
+    font-weight: 500;
+    font-size: 30px;  
+    margin: 0 0 20px 0;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    max-width: 190px; 
+}
+
+.advantages-item-text{
+    margin: 0;
+}
+
+.slogan{
+    margin: 0;
+    font-size: 42px;
+    font-weight: 500;
+    grid-column: 1 / 13;
+    text-align: center;
+}
+
+.try{
+    grid-column: 5 / span 4;
+    padding: 20px 0;
+    background: linear-gradient(0deg, #ffdb02, #ffe34a);
+    border: none;
+    border-radius: 15px;
+}
+
+.try__caption{
+    color: rgba(0,0,0,0.72);
+    font-size: 36px;
+    margin: 0;
+}
+
+.try:hover{
+    background: linear-gradient(0deg, #ffe12f, #ffe86b);
+}
+
+.try:hover > .try__caption{
+    background-color: rgba(0,0,0,1);
+    text-shadow: 1px 1px 3px #ffe02f;
+    background-clip: text;
+}
+
+.main-child{
+    margin-bottom: 70px;
+}

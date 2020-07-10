@@ -35,6 +35,8 @@ Object.defineProperty(student, 'type', {
   value: 'student'
 });
 
-for (var key in student) {
-  console.log(key);
-}
+var obj = Object.create(null);
+
+console.log(obj);
+
+console.log();
