@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434344;
+    background-color: #cfd0cf;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin: 40px 0;
+}
+
+.main__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cards__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    perspective: 600px;
+}
+
+.game__card {
+    display: flex;
+    list-style: none;
+    height: 130px;
+    width: 130px;
+    border: 5px solid #fff;
+    border-radius: 9px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+    background: linear-gradient(90deg, rgba(34,171,147,1) 0%, rgba(25,102,141,1) 100%);
+    cursor: pointer;
+
+    transition: transform .3s;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.back {
+    display: none;
+}
+
+.flip>.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 75px;
+    background-color: #fff;
+}

@@ -1,0 +1,155 @@
+body {
+    height: 90vh;
+    background-color: #CFD0CF;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+h1 {
+    font-family: "Arial", serif;
+    font-size: 42px;
+    color: #434344;
+    text-align: center;
+    margin: 40px auto 0;
+}
+
+.game {
+    width: 660px;
+    margin: 40px auto 30px auto;
+}
+
+.card_container {
+    cursor: pointer;
+    width: 130px;
+    margin: calc(25px/2);
+    height: 130px;
+    perspective: 600px;
+    position: relative;
+    display: inline-block;
+}
+
+.card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+.card.rotate {
+    transform: rotateY(180deg);
+}
+
+.card .side {
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: linear-gradient(45deg, #22ab93, #19668d);
+    border: solid white 5px;
+    border-radius: 9px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card .back {
+    border: 0;
+    background: white;
+    line-height: 130px;
+    font-size: 75px;
+    text-align: center;
+    transform: rotateY(180deg);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.time {
+    font-family: Arial, serif;
+    font-size: 32px;
+    text-align: center;
+    color: #434344;
+    display: inline;
+    font-weight: bold;
+}
+
+.timer {
+    margin: 0 auto;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal .content {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    background: white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.play_button {
+    display: inline-block;
+    background: linear-gradient(45deg, #22ab93, #19668d);
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 40px 0 30px 0;
+    height: 40px;
+    cursor: pointer;
+}
+
+.play_button .text {
+    margin: 5px 30px;
+    font: 20px Arial bold;
+    color: white;
+}
+
+.message {
+    font: 48px Arial bold;
+    color: #434344;
+    margin: 30px 0 0 0;
+}
+
+.message span {
+    letter-spacing: 5px;
+    display: inline-block;
+    animation: jumping 1.1s ease-in-out infinite;
+}
+
+.play_button:active {
+    box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes jumping {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.12);
+    }
+}
+
+span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+span:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.modal {
+    display: none;
+}

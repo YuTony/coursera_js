@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #CFD0CF;
+
+    cursor: default;
+}
+
+header{
+    line-height: 47px;
+    font-size: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434344;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+.line{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 130px;
+    width: 130px;
+    border-radius: 9px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+
+    cursor: pointer;
+
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.add{
+    transform: rotateY(180deg);
+}
+
+.bl3d{
+    perspective: 600px;
+    margin: 0 25px 25px 0;
+}
+
+.line .bl3d:last-child{
+    margin: 0 0 25px;
+}
+
+.card_shirt{
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #19668D;
+    background: linear-gradient(45deg, #22AB93, #19668D);
+
+    backface-visibility: hidden;
+}
+
+.card_info{
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}

@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", "Open Sans", sans-serif;
+    color: #434344;
+
+    background: #CFD0CF;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 42px;
+    line-height: 47px;
+
+    margin: 40px 0;
+}
+
+.cards__list {
+    display: flex;
+    width: 595px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+
+.cards__item {
+    width: 130px;
+    height: 130px;
+
+    margin-bottom: 25px;
+
+    perspective: 600px;
+
+    cursor: pointer;
+}
+
+.cards__item.flipper .cards__flipper {
+    transform: rotateY(180deg);
+}
+
+.cards__flipper {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 5px solid #fff;
+    border-radius: 9px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+
+.cards__back {
+    z-index: 2;
+
+    background: linear-gradient(to top right, #22AB93, #19668D);
+}
+
+.cards__emoji {
+    background: #fff;
+    font-size: 75px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
+
+    transform: rotateY(180deg);
+}
+
+.cards__emoji.equal {
+    background: #5AD66F;
+    border-color: #5AD66F;
+}
+
+.cards__emoji.unequal {
+    background: #F44336;
+    border-color: #F44336;
+}
